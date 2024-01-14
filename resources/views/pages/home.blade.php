@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <x-title-pages :title="'Dashboard'" />
+    <x-title-pages title="Dashboard" />
     <div class="grid grid-cols-3 gap-4">
         <div class="flex items-center px-5 bg-green-400 w-full h-24 rounded-md">
             <svg class="w-12 h-12 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"

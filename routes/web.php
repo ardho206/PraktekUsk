@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -31,5 +32,9 @@ Route::middleware('auth')->group(function () {
     Route::controller(DashboardController::class)->group(function () {
         Route::get('/dashboard', 'index')->name('dashboard.index');
         Route::get('/user', 'user')->name('dashboard.user');
+    });
+
+    Route::controller(UserController::class)->group(function () {
+        Route::post('/user/add', 'store')->name('user.store');
     });
 });

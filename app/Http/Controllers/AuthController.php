@@ -20,6 +20,8 @@ class AuthController extends Controller
 
             return redirect()->intended('dashboard');
         }
+
+        return back()->with('error', 'Login Failed!')->onlyInput('email');
     }
 
     public function logout(Request $request): RedirectResponse
